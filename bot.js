@@ -70,7 +70,7 @@ client.on("message", async message => {
                     },
                     {
                       name: "Sunucu IP",
-                      value: "**connect " + ip + ":" + port + "**",
+                      value: ip + ":" + port + "**",
                       "inline": true
                     },
                     {
