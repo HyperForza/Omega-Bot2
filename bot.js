@@ -59,40 +59,33 @@ client.on("message", async message => {
                   embed: {
                     color: 3447003,
                     author: {
-                      name: client.user.username,
-                      icon_url: client.user.avatarURL
+
                     },
-                    title: "Omega",
+                    title: "Omega Oyuncu Topluluğu",
                     url: "https://steamcommunity.com/groups/OmegaOyuncuToplulugu",
                     fields: [{
-                      name: "Sunucu Adı",
+                      name: "⭐ | Sunucu Adı",
                       value: "**" + info.name + "**"
                     },
                     {
-                      name: "Sunucu IP",
-                      value: ip + ":" + port + "**",
+                      name: "🔷 | Ip Adresi",
+                      value: "**connect " + ip + ":" + port + "**",
                       "inline": true
                     },
                     {
-                      name: "Şuanki Harita",
+                      name: "🗺️ | Harita ",
                       value: info.map,
                       "inline": true
                     },
                     {
-                      name: "Mevcut Oyuncular",
-                      value: info.players,
-                      "inline": true
+                      name: "👥 | Oyuncular",
+                      value: playersname,
+ 
                     },
-                    {
-                      name: "Aktif Oyuncular",
-                      value: playersname
-                    }
+
                     ],
                     timestamp: new Date(),
-                    footer: {
-                      icon_url: client.user.avatarURL,
-                      text: "© Omega"
-                    }
+
                   }
                 });
               }
@@ -112,8 +105,6 @@ client.on("message", async message => {
     });
   }
 
-
-  
 
 
 
@@ -173,4 +164,4 @@ client.on("message", async message => {
 
 });
 
-client.login(config.token);
+client.login(process.env.token);
